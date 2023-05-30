@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyTaskCompose</string>
+    <string name="splash">Splash</string>
+    <string name="letsStart">Let’s Start</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="login">Login</string>
+</resources>
