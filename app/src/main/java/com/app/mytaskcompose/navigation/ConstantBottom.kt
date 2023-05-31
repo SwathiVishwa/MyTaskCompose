@@ -1,5 +1,7 @@
 package com.app.mytaskcompose.navigation
 
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
 import com.app.mytaskcompose.R
 
 object ConstantBottom {
@@ -15,8 +17,8 @@ object ConstantBottom {
             route = Screens.MessageScreen.name
         ),
         BottomNavItem(
-            label = "",
-            icon = R.drawable.bottom_ic_add,
+            label = "create",
+            icon = R.drawable.ic_add,
             route = Screens.CreateTaskScreen.name
         ),
         BottomNavItem(
@@ -26,7 +28,7 @@ object ConstantBottom {
         ),
         BottomNavItem(
             label = "Notification",
-            icon = R.drawable.bottom_ic_notification,
+            icon =  R.drawable.bottom_ic_notification,
             route = Screens.NotificationScreen.name
         )
     )

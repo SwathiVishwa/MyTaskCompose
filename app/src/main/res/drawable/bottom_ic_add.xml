@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="@color/yellow" />
-        </shape>
-    </item>
-    <item
-        android:bottom="2dp"
-        android:drawable="@drawable/ic_add"
-        android:left="2dp"
-        android:right="2dp"
-        android:top="2dp" />
-</layer-list>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="54dp"
+    android:height="54dp"
+    android:viewportWidth="54"
+    android:viewportHeight="54">
+  <path
+      android:pathData="M0,0h54v54h-54z"
+      android:fillColor="#FED36A"/>
+  <path
+      android:pathData="M23,27H31M27,31V23M24,37H30C35,37 37,35 37,30V24C37,19 35,17 30,17H24C19,17 17,19 17,24V30C17,35 19,37 24,37Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"
+      android:strokeColor="#263238"
+      android:strokeLineCap="round"/>
+</vector>

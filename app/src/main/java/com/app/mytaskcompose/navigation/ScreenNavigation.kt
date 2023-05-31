@@ -25,7 +25,7 @@ fun ScreenNavigation(navController: NavHostController, bottomBarState: MutableSt
             LoginScreen(navController = navController)
         }
         composable(Screens.HomeScreen.name) {
-            bottomBarState.value = false
+            bottomBarState.value = true
             HomeScreen(navController = navController)
         }
 
@@ -35,7 +35,7 @@ fun ScreenNavigation(navController: NavHostController, bottomBarState: MutableSt
         }
 
         composable(Screens.MessageScreen.name) {
-            bottomBarState.value = false
+            bottomBarState.value = true
             MessagesScreen(navController = navController)
         }
 
@@ -55,22 +55,22 @@ fun ScreenNavigation(navController: NavHostController, bottomBarState: MutableSt
         }
 
         composable(Screens.ScheduleScreen.name) {
-            bottomBarState.value = false
+            bottomBarState.value = true
             ScheduleScreen(navController = navController)
         }
 
         composable(Screens.CreateTaskScreen.name) {
-            bottomBarState.value = false
+            bottomBarState.value = true
             CreateTaskScreen(navController = navController)
         }
 
         composable(Screens.NotificationScreen.name) {
-            bottomBarState.value = false
+            bottomBarState.value = true
             NotificationScreen(navController = navController)
         }
 
         composable(Screens.ProfileScreen.name) {
-            bottomBarState.value = false
+            bottomBarState.value = true
             ProfileScreen(navController = navController)
         }
     }
