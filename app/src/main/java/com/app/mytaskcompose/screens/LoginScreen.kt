@@ -1,15 +1,13 @@
 package com.app.mytaskcompose.screens
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
@@ -43,7 +41,7 @@ fun LoginScreen(navController: NavController) {
                 .verticalScroll(state = scrollState)
                 .padding(all = 25.dp)
         ) {
-            val (logo, txtTitle, txtEmail, edtEmail, txtPassword, edtPassword, txtForgot, btnLogin) = createRefs()
+            val (logo, txtTitle, txtEmail, edtEmail, txtPassword, edtPassword, txtForgot, btnLogin, divider, btnGoogle, txtSignUp) = createRefs()
             Image(
                 painter = painterResource(id = R.drawable.ic_logo),
                 contentDescription = stringResource(id = R.string.app_name),
@@ -189,7 +187,6 @@ fun LoginScreen(navController: NavController) {
                         top.linkTo(txtForgot.bottom, margin = 30.dp)
                         start.linkTo(parent.start)
                         end.linkTo(parent.end)
-                        bottom.linkTo(parent.bottom, margin = 20.dp)
                     }
                     .fillMaxWidth()
                     .height(60.dp),
@@ -201,6 +198,72 @@ fun LoginScreen(navController: NavController) {
                     color = colorResource(id = R.color.black), fontSize = 18.sp
                 )
             }
+            Row(modifier = Modifier.constrainAs(divider) {
+                top.linkTo(btnLogin.bottom, margin = 30.dp)
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+            }) {
+                Divider(
+                    color = colorResource(id = R.color.yellow),
+                    thickness = 1.dp,
+                    modifier = Modifier
+                        .padding(all = 10.dp)
+                        .width(100.dp)
+                )
+                Text(
+                    "Or continue with",
+                    color = colorResource(id = R.color.textPrimary),
+                    fontSize = 16.sp,
+                )
+                Divider(
+                    color = colorResource(id = R.color.yellow),
+                    thickness = 1.dp,
+                    modifier = Modifier
+                        .padding(all = 10.dp)
+                        .fillMaxWidth()
+                        .wrapContentWidth(align = Alignment.CenterHorizontally)
+                )
+            }
+            Button(
+                modifier = Modifier
+                    .padding(all = 10.dp)
+                    .constrainAs(btnGoogle) {
+                        top.linkTo(divider.bottom, margin = 30.dp)
+                        start.linkTo(parent.start)
+                        end.linkTo(parent.end)
+                    }
+                    .fillMaxWidth()
+                    .height(60.dp),
+                onClick = { navController.navigate(Screens.HomeScreen.name) },
+                colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.darkBlue)),
+                border = BorderStroke(2.dp, color = colorResource(id = R.color.white))
+            ) {
+                Image(painter = painterResource(id = R.drawable.ic_google), contentDescription = "")
+                Text(
+                    text = stringResource(id = R.string.google), modifier = Modifier.padding(10.dp),
+                    color = colorResource(id = R.color.white), fontSize = 18.sp
+                )
+            }
+            Row(modifier = Modifier
+                .padding(vertical = 10.dp)
+                .constrainAs(txtSignUp) {
+                    top.linkTo(btnGoogle.bottom, margin = 30.dp)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                }) {
+                Text(
+                    "Don't have an Account ?",
+                    color = colorResource(id = R.color.textPrimary),
+                    fontSize = 16.sp,
+                )
+                Text(
+                    "Signup",
+                    color = colorResource(id = R.color.yellow),
+                    fontSize = 16.sp,
+                    modifier = Modifier.clickable { navController.navigate(Screens.SignUpScreen.name) }
+                )
+            }
+
         }
     }
 }

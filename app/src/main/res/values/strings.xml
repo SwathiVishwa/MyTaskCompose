@@ -3,8 +3,13 @@
     <string name="splash">Splash</string>
     <string name="letsStart">Let’s Start</string>
     <string name="welcome_back">Welcome Back!</string>
+    <string name="create_your_account">Create your account</string>
     <string name="email_address">Email Address</string>
+    <string name="full_name">Full Name</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password ?</string>
     <string name="login">Login</string>
+    <string name="google">Google</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="terms">I have read &amp; agreed to DayTask Privacy Policy, Terms &amp; Condition</string>
 </resources>
