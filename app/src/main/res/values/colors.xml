@@ -13,5 +13,6 @@
     <color name="menuText">#617D8A</color>
     <color name="menuBg">#263238</color>
     <color name="textPrimary">#8CAAB9</color>
+    <color name="textsecondary">#212832</color>
     <color name="editTxtBg">#455A64</color>
 </resources>

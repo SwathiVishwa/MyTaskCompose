@@ -100,7 +100,7 @@ fun SignupScreen(navController: NavController) {
                     textStyle = TextStyle(color = colorResource(id = R.color.white)),
                     leadingIcon = {
                         Icon(
-                            painter = painterResource(id = R.drawable.ic_user),
+                            painter = painterResource(id = R.drawable.ic_user_placeholder),
                             "",
                             tint = Color.White
                         )
@@ -238,14 +238,17 @@ fun SignupScreen(navController: NavController) {
                             .show()
                     },
                     colors = CheckboxDefaults.colors(
-                        checkedColor = colorResource(id = R.color.yellow), uncheckedColor = colorResource(id = R.color.yellow)
+                        checkedColor = colorResource(id = R.color.yellow),
+                        uncheckedColor = colorResource(id = R.color.yellow)
                     )
 
                 )
 
                 Text(
                     modifier = Modifier.padding(start = 2.dp),
-                    text = stringResource(id = R.string.terms), color = colorResource(id = R.color.textPrimary), fontSize = 14.sp
+                    text = stringResource(id = R.string.terms),
+                    color = colorResource(id = R.color.textPrimary),
+                    fontSize = 14.sp
                 )
             }
 
