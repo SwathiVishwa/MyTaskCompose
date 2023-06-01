@@ -159,7 +159,7 @@ fun SplashScreens(navController: NavController) {
                 .constrainAs(txtTitle) {
                     top.linkTo(image.bottom)
                 }) {
-                Column() {
+                Column {
                     Text(
                         text = "Manage \n your \nTask with ",
                         color = colorResource(id = R.color.white),

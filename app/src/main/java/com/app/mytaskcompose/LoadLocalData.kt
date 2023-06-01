@@ -31,7 +31,7 @@ object LoadLocalData {
 
     fun ongoingProjects(): ArrayList<ProjectList> {
         val ongoingList: ArrayList<ProjectList> = arrayListOf()
-        for (i in 0..3) {
+        for (i in 0..1) {
             ongoingList.add(ProjectList(project1, status, userList()))
             ongoingList.add(ProjectList(project2, status, userList()))
             ongoingList.add(ProjectList(project3, status, userList()))
